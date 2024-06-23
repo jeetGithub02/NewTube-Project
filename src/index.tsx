@@ -3,13 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "../node_modules/bootstrap/dist/css/bootstrap.css"
+import { CookiesProvider } from 'react-cookie';
+import { Provider } from 'react-redux';
+import {store }from './store/store';
+// import APIDemo from './components/API-demo';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <CookiesProvider>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </CookiesProvider>
   </React.StrictMode>
 );
 

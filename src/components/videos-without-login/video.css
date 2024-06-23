@@ -1,0 +1,9 @@
+.title{
+    cursor: pointer;
+}
+.truncate2lines{
+    -Webkit-line-Clamp:2 ;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+}
